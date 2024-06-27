@@ -1,0 +1,192 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+.wrapper .container-checklist {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 703px;
+  padding: 12px 18px 15px 22px;
+  background: #3579F5;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.wrapper .container-checklist .container {
+  display: flex;
+}
+.wrapper .container-checklist .container .container-progress {
+  display: flex;
+  align-self: end;
+  margin-right: 16px;
+}
+.wrapper .container-checklist .container .container-progress .progressbar {
+  display: flex;
+  align-items: end;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 1;
+}
+.wrapper .container-checklist .container .container-progress .progressbar .number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.wrapper .container-checklist .container .container-progress .progressbar .number h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.wrapper .container-checklist .container .container-progress .progressbar .number h2 span {
+  color: #fff;
+  font-size: 20;
+}
+.wrapper .container-checklist .container .container-progress .progressbar svg {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform: rotate(-85deg);
+  overflow: visible;
+}
+.wrapper .container-checklist .container .container-progress .progressbar svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1px;
+  stroke-linecap: round;
+}
+.wrapper .container-checklist .container .container-progress .progressbar svg circle:nth-child(2) {
+  stroke-dasharray: 189;
+  stroke-dashoffset: calc(189 - 189 * var(--percent) / 100);
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.wrapper .container-checklist .container .container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wrapper .container-checklist .container .container-text .check {
+  max-width: 76px;
+  text-align: center;
+  background: #2364DB;
+  border-radius: 40px;
+}
+.wrapper .container-checklist .container .container-text .check p {
+  padding: 0 13px;
+}
+.wrapper .container-checklist .container .container-text p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.wrapper .container-checklist .container .container-text p:nth-child(2) {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+.wrapper .container-checklist .btn {
+  display: flex;
+  align-self: center;
+  color: #4777ED;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border: 0;
+  border-radius: 6px;
+  background: #F4F8FF;
+  padding: 10px 25px;
+}
+
+@media (max-width: 673px) {
+  .wrapper .container-checklist .container .container-progress {
+    align-self: center;
+  }
+}
+@media (max-width: 474px) {
+  .wrapper .container-checklist {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .wrapper .container-checklist .container {
+    justify-content: center;
+  }
+  .wrapper .container-checklist .container .container-progress {
+    align-self: end;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar {
+    width: 70px;
+    height: 70px;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar svg {
+    width: 70px;
+    height: 70px;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar svg circle {
+    cx: 35;
+    cy: 35;
+    r: 35;
+  }
+  .wrapper .container-checklist .container .container-text {
+    max-width: 230px;
+  }
+}
+@media (max-width: 348px) {
+  .wrapper .container-checklist .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .wrapper .container-checklist .container .container-progress {
+    align-self: center;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar {
+    width: 80px;
+    height: 80px;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar svg {
+    width: 80px;
+    height: 80px;
+  }
+  .wrapper .container-checklist .container .container-progress .progressbar svg circle {
+    cx: 40;
+    cy: 40;
+    r: 40;
+  }
+  .wrapper .container-checklist .container .container-text {
+    max-width: 230px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #232323;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  justify-content: center;
+}
+
+:root {
+  --percent: 2;
+}/*# sourceMappingURL=main.css.map */

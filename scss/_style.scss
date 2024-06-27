@@ -1,0 +1,212 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    padding: 0 5px;
+
+    .container-checklist {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 703px;
+        padding: 12px 18px 15px 22px;
+        background: #3579F5;
+        border-radius: 10px;
+        justify-content: space-between;
+
+        .container {
+            display: flex;
+
+            .container-progress {
+                display: flex;
+                align-self: end;
+                margin-right: 16px;
+    
+                .progressbar {
+                    display: flex;
+                    align-items: end;
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    z-index: 1;
+        
+                    .number {
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+        
+                        h2 {
+                            color: #fff;
+                            font-weight: 400;
+                            font-size: 20px;
+                            transition: .3s ease;
+        
+                            span {
+                                color: #fff;
+                                font-size: 20;
+                            }
+                        }
+                    }
+        
+                    svg {
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        transform: rotate(-85deg);
+                        overflow: visible;
+        
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke: rgba(255,255,255,0.5);
+                            stroke-width: 1px;
+                            stroke-linecap: round;
+        
+                            &:nth-child(2) {
+                                stroke-dasharray: 189;
+                                stroke-dashoffset: calc(189 - (189 * var(--percent)) / 100);
+                                stroke: #fff;
+                                stroke-width: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            .container-text {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+    
+                .check {
+                    max-width: 76px;
+                    text-align: center;
+                    background: #2364DB;
+                    border-radius: 40px;
+    
+                    p {
+                        padding: 0 13px;
+                    }
+                }
+                
+    
+                p {
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 400;
+    
+                    &:nth-child(2) {
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        
+        .btn {
+            display: flex;
+            align-self: center;
+            color: #4777ED;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            border: 0;
+            border-radius: 6px;
+            background: #F4F8FF;
+            padding: 10px 25px;
+        }
+    } 
+}
+
+@media (max-width: 673px) {
+    .wrapper .container-checklist .container .container-progress {
+        align-self: center;
+    }
+}
+
+@media (max-width: 474px) {
+    .wrapper {
+        .container-checklist {
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+
+            .container {
+                justify-content: center;
+
+                .container-progress {
+                    align-self: end;
+
+                    .progressbar {
+                        width: 70px;
+                        height: 70px;
+
+                        svg {
+                            width: 70px;
+                            height: 70px;
+                            
+                            circle {
+                                cx: 35;
+                                cy: 35;
+                                r: 35;
+                            }
+                        }
+                    }
+                }
+
+                .container-text {
+                    max-width: 230px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 348px) {
+    .wrapper {
+        .container-checklist {
+
+            .container {
+                flex-direction: column;
+                gap: 10px;
+
+                .container-progress {
+                    align-self: center;
+
+                    .progressbar {
+                        width: 80px;
+                        height: 80px;
+
+                        svg {
+                            width: 80px;
+                            height: 80px;
+
+                            circle {
+                                cx: 40;
+                                cy: 40;
+                                r: 40;
+                            }
+                        }
+                    }
+                }
+                
+                .container-text {
+                    max-width: 230px;
+                }
+            }
+        }
+    }
+}
