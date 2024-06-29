@@ -59,7 +59,7 @@
   position: relative;
   width: 60px;
   height: 60px;
-  transform: rotate(-85deg);
+  transform: rotate(-90deg);
   overflow: visible;
 }
 .wrapper .container-checklist .container .container-progress .progressbar svg circle {
@@ -143,6 +143,10 @@
     cy: 35;
     r: 35;
   }
+  .wrapper .container-checklist .container .container-progress .progressbar svg circle:nth-child(2) {
+    stroke-dasharray: 220;
+    stroke-dashoffset: calc(220 - 220 * var(--percent) / 100);
+  }
   .wrapper .container-checklist .container .container-text {
     max-width: 230px;
   }
@@ -168,6 +172,10 @@
     cy: 40;
     r: 40;
   }
+  .wrapper .container-checklist .container .container-progress .progressbar svg circle:nth-child(2) {
+    stroke-dasharray: 251;
+    stroke-dashoffset: calc(251 - 251 * var(--percent) / 100);
+  }
   .wrapper .container-checklist .container .container-text {
     max-width: 230px;
   }
@@ -188,5 +196,5 @@ body {
 }
 
 :root {
-  --percent: 2;
+  --percent: 50;
 }/*# sourceMappingURL=main.css.map */

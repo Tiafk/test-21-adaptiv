@@ -62,7 +62,7 @@
                         position: relative;
                         width: 60px;
                         height: 60px;
-                        transform: rotate(-85deg);
+                        transform: rotate(-90deg);
                         overflow: visible;
         
                         circle {
@@ -162,6 +162,11 @@
                                 cx: 35;
                                 cy: 35;
                                 r: 35;
+
+                                &:nth-child(2) {
+                                    stroke-dasharray: 220;
+                                    stroke-dashoffset: calc(220 - (220 * var(--percent)) / 100);
+                                }
                             }
                         }
                     }
@@ -198,6 +203,11 @@
                                 cx: 40;
                                 cy: 40;
                                 r: 40;
+
+                                &:nth-child(2) {
+                                    stroke-dasharray: 251;
+                                    stroke-dashoffset: calc(251 - (251 * var(--percent)) / 100);
+                                }
                             }
                         }
                     }
